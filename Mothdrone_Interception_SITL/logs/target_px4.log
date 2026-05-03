@@ -1,0 +1,67 @@
+INFO  [px4] instance: 1
+
+______  __   __    ___ 
+| ___ \ \ \ / /   /   |
+| |_/ /  \ V /   / /| |
+|  __/   /   \  / /_| |
+| |     / /^\ \ \___  |
+\_|     \/   \/     |_/
+
+px4 starting.
+
+INFO  [px4] startup script: /bin/sh etc/init.d-posix/rcS 1
+env SYS_AUTOSTART: 4004
+INFO  [param] selected parameter default file parameters.bson
+INFO  [param] importing from 'parameters.bson'
+INFO  [parameters] BSON document size 696 bytes, decoded 696 bytes (INT32:21, FLOAT:13)
+INFO  [param] selected parameter backup file parameters_backup.bson
+ERROR [param] Parameter FD_ACT_MOT_TOUT not found.
+INFO  [dataman] data manager file './dataman' size is 1208528 bytes
+INFO  [init] Gazebo simulator 8.11.0
+INFO  [init] Standalone PX4 launch, waiting for Gazebo
+INFO  [init] Gazebo world is ready
+INFO  [init] Gazebo model pose: 0 100 0 0 0 0
+INFO  [init] Spawning Gazebo model
+INFO  [lockstep_scheduler] setting initial absolute time to 18368000 us
+INFO  [gz_bridge] world: default, model: standard_vtol_1
+INFO  [commander] LED: open /dev/led0 failed (22)
+WARN  [health_and_arming_checks] Preflight Fail: Airspeed selector module down
+WARN  [health_and_arming_checks] Preflight Fail: ekf2 missing data
+INFO  [airspeed_selector] No airspeed sensor detected. Switch to non-airspeed mode.	
+INFO  [uxrce_dds_client] init UDP agent IP:127.0.0.1, port:8888
+INFO  [mavlink] mode: Normal, data rate: 4000000 B/s on udp port 18571 remote port 14550
+INFO  [mavlink] partner IP: 127.0.0.1
+INFO  [mavlink] mode: Onboard, data rate: 4000000 B/s on udp port 14581 remote port 14541
+INFO  [mavlink] mode: Onboard, data rate: 4000 B/s on udp port 14281 remote port 14031
+INFO  [mavlink] mode: Gimbal, data rate: 400000 B/s on udp port 13031 remote port 13281
+INFO  [logger] logger started (mode=all)
+INFO  [logger] Max log file size: 1024 MB
+INFO  [logger] Start file log (type: full)
+INFO  [logger] [logger] ./log/2026-05-01/16_30_47.ulg	
+INFO  [logger] Opened full log file: ./log/2026-05-01/16_30_47.ulg
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [mavlink] MAVLink only on localhost (set param MAV_{i}_BROADCAST = 1 to enable network)
+INFO  [px4] Startup script returned successfully
+INFO  [tone_alarm] home set
+WARN  [airspeed_selector] Airspeed sensor healthy, start using again (-1, 1)	
+INFO  [commander] [32mReady for takeoff![0m
+INFO  [mavlink] Ignore command 512 from 255/190 to 1/1
+INFO  [mavlink] Ignore command 521 from 255/190 to 1/1
+INFO  [mavlink] Ignore command 512 from 255/190 to 1/1
+INFO  [mavlink] Ignore command 521 from 255/190 to 1/1
+INFO  [mavlink] partner IP: 127.0.0.1
+ERROR [mavlink] param types mismatch param: COM_DL_LOSS_T
+INFO  [commander] Armed by external command	
+INFO  [tone_alarm] arming warning
+INFO  [navigator] Using default takeoff altitude: 22.0 m	
+INFO  [commander] Takeoff detected	
+INFO  [mavlink] Ignore command 512 from 255/190 to 1/1
+INFO  [mavlink] Ignore command 521 from 255/190 to 1/1
+INFO  [commander] Disarmed by external command	
+INFO  [tone_alarm] notify neutral
+INFO  [logger] closed logfile, bytes written: 16870444
+WARN  [health_and_arming_checks] Preflight Fail: Airspeed too high
+WARN  [health_and_arming_checks] Preflight Fail: horizontal velocity unstable
+
+PX4 Exiting...
+Exiting NOW.
