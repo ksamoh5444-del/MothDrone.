@@ -1,0 +1,110 @@
+/*
+Design philosophy reminder: Dark-mode technical aesthetic with tactical blue accents. Deep charcoal backgrounds, crisp white typography, subtle blue rim lighting, zero fog/blur, and enhanced annotation positioning for unobstructed component visibility.
+*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e12;
+  --foreground: #e8eef5;
+  --muted: #7a8a9a;
+  --line: rgba(232, 238, 245, 0.12);
+  --teal: #00d4d4;
+  --copper: #d4a574;
+  --aluminum: #c8d0d8;
+  --gold: #ffd700;
+  --danger: #ff4444;
+  --tactical-blue: #00b4e8;
+  --panel: rgba(20, 26, 36, 0.92);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Space Grotesk", "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--tactical-blue);
+  outline-offset: 3px;
+}
+
+.engineering-bg {
+  background-image:
+    linear-gradient(rgba(0, 180, 232, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 232, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 18% 20%, rgba(212, 165, 116, 0.06), transparent 28%),
+    radial-gradient(circle at 78% 82%, rgba(255, 215, 0, 0.08), transparent 30%),
+    linear-gradient(135deg, #0a0e12 0%, #0f1419 47%, #141a24 100%);
+  background-size: 44px 44px, 44px 44px, auto, auto, auto;
+}
+
+.panel-cut {
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+}
+
+.telemetry-number {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.flash-locked {
+  animation: lockedFlash 0.72s steps(2, end) infinite;
+}
+
+.flash-firing {
+  animation: firingFlash 0.34s steps(2, end) infinite;
+}
+
+@keyframes lockedFlash {
+  0%, 100% { color: #00d4d4; background: rgba(0, 212, 212, 0.12); }
+  50% { color: #ffffff; background: #00d4d4; }
+}
+
+@keyframes firingFlash {
+  0%, 100% { color: #ffffff; background: var(--danger); box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.35); }
+  50% { color: var(--danger); background: rgba(255, 68, 68, 0.08); box-shadow: 0 0 0 8px rgba(255, 68, 68, 0); }
+}
+
+.annotation-card {
+  pointer-events: none;
+  min-width: 156px;
+  border: 1px solid var(--tactical-blue);
+  background: rgba(20, 26, 36, 0.96);
+  box-shadow: 0 14px 36px rgba(0, 180, 232, 0.12);
+  color: #e8eef5;
+  padding: 10px 12px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  font-family: "Space Grotesk", monospace;
+}
+
+.annotation-title {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00b4e8;
+}
+
+.annotation-meta {
+  margin-top: 3px;
+  display: block;
+  font-size: 10px;
+  color: #a8b8d0;
+}
